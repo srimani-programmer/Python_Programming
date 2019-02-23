@@ -26,6 +26,9 @@ begin_time = time.time()
 square_thread.start()
 cube_thread.start()
 
+square_thread.join()    # square_thread.join(): It is used to wait the main thread 
+cube_thread.join()  # join() methods is used to wait the other thread until the current thread execution
+
 end_time = time.time()
 
 print('The total time taken by the program is: {}'.format(end_time - begin_time))
